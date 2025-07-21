@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const orderDetails = document.createElement('div');
             orderDetails.classList.add('order-details');
             orderDetails.innerHTML = `
-                <p><strong>Total Amount:</strong> $${order.totalAmount}</p>
+                <p><strong>Total Amount:</strong> Rs ${order.totalAmount}</p>
                 <p><strong>Payment Method:</strong> ${order.paymentMethod}</p>
                 <p><strong>Status:</strong> ${order.status}</p>
                 <p><strong>Shipping To:</strong> ${order.billingDetails.fullName}, ${order.billingDetails.houseNo}, ${order.billingDetails.roadArea}, ${order.billingDetails.city}, ${order.billingDetails.state} - ${order.billingDetails.pincode}</p>
