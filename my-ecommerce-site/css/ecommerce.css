@@ -1,0 +1,330 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.body.dark-theme .navbar {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-left .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav-left ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-left ul li {
+    margin-right: 20px;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.body.dark-theme .nav-left ul li a {
+    color: #ccc;
+}
+
+.nav-left ul li a:hover {
+    color: #007bff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    margin-right: 20px;
+}
+
+.search-box input {
+    padding: 8px 10px 8px 30px; /* Left padding for icon */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.9em;
+    width: 180px;
+    transition: width 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.body.dark-theme .search-box input {
+    background-color: #555;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+.search-box input::placeholder {
+    color: #888;
+}
+
+.body.dark-theme .search-box input::placeholder {
+    color: #bbb;
+}
+
+.search-box input:focus {
+    width: 220px;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.search-box .fas.fa-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.body.dark-theme .search-box .fas.fa-search {
+    color: #bbb;
+}
+
+
+.cart-icon {
+    margin-right: 20px;
+}
+
+.cart-icon a {
+    position: relative;
+    color: #555;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.body.dark-theme .cart-icon a {
+    color: #ccc;
+}
+
+#cart-item-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 0.7em;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 10px;
+    text-align: center;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.body.dark-theme .theme-toggle-btn {
+    color: #ccc;
+}
+
+.theme-toggle-btn:hover {
+    color: #007bff;
+}
+
+/* Product Listing */
+.product-listing-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.product-listing-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.body.dark-theme .product-listing-container h2 {
+    color: #e0e0e0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.body.dark-theme .product-card {
+    background-color: #444;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.body.dark-theme .product-card h3 {
+    color: #e0e0e0;
+}
+
+.product-card p.price {
+    font-size: 1.1em;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left ul {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .nav-left ul li {
+        margin-bottom: 5px;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-box input {
+        width: 100px;
+    }
+
+    .search-box input:focus {
+        width: calc(100% - 60px); /* Adjust for icon and margin */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar nav {
+        padding: 10px;
+    }
+
+    .nav-left .logo {
+        font-size: 1.5em;
+    }
+
+    .nav-left ul {
+        display: none; /* Hide navigation links on very small screens, could add a hamburger menu */
+    }
+
+    .search-box {
+        margin-right: 10px;
+    }
+
+    .search-box input {
+        width: 80px;
+        font-size: 0.8em;
+    }
+
+    .cart-icon a {
+        font-size: 1.3em;
+    }
+
+    .theme-toggle-btn {
+        font-size: 1.2em;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on smallest screens */
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+}
