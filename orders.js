@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-info">
                         <h4>${item.name}</h4>
-                        <p>Quantity: ${item.quantity} | Price: $${item.price.toFixed(2)} each</p>
+                        <p>Quantity: ${item.quantity} | Price: Rs ${item.price.toFixed(2)} each</p>
                     </div>
                 `;
                 orderItemsList.appendChild(orderItem);
