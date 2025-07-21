@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MyStore</title>
+    <link rel="stylesheet" href="css/ecommerce.css"> <!-- Inherit general styles -->
+    <link rel="stylesheet" href="css/contact.css"> <!-- Page-specific styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header class="navbar">
+        <nav>
+            <div class="nav-left">
+                <a href="ecommerce.html" class="logo">MyStore</a>
+            </div>
+
+            <div class="nav-main-controls">
+                <div class="search-box">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-item-count">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-links-desktop">
+                    <li><a href="ecommerce.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us -->
+                    <li><a href="#">About Us</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#" id="logout-btn" class="desktop-logout-btn">Logout</a>
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+        <ul class="mobile-nav-links">
+            <li><a href="ecommerce.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us -->
+            <li><a href="#">About Us</a></li>
+            <li><a href="#" id="mobile-logout-btn">Logout</a></li>
+        </ul>
+    </div>
+
+    <main class="contact-container">
+        <h2>Get in Touch</h2>
+
+        <div class="contact-info-section">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Address</h3>
+                <p>02/45B, New colony</p>
+                <p>Gaya city, Bihar India 823001</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+91 8092801861</p>
+                <p>Mon - Fri, 9 AM - 5 PM IST</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p><a href="mailto:support@mystore.com">jeebala925@gmail.com</a></p>
+                <p>We aim to respond within 24 hours.</p>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h3>Send us a Message</h3>
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Subject of your message" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="6" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+            <p id="form-status" class="status-message"></p>
+        </div>
+    </main>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>
